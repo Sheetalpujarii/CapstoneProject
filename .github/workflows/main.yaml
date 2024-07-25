@@ -1,0 +1,21 @@
+name: SP GitHub Actions Workflow
+ 
+on:
+  push:
+    branches:
+      - '*'
+ 
+jobs:
+  dummy-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Print a message
+        run: echo "Hello, GitHub Actions!"
+ 
+      - name: Show current directory
+        run: pwd
+ 
+      - name: List files in the repository
+        run: ls -R
